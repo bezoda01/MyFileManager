@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.filemanager.Controller">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem text="Выйти из программы" onAction="#btnExitAction"/>
+        </Menu>
+    </MenuBar>
+
+   <HBox VBox.vgrow="ALWAYS">
+       <fx:include fx:id="LeftPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+       <fx:include fx:id="RightPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+   </HBox>
+
+    <HBox spacing="5">
+
+        <Button focusTraversable="false" text="Копировать файл" maxHeight="Infinity" HBox.hgrow="ALWAYS" onAction="#copyButtonAction"/>
+        <Button focusTraversable="false" text="Переместить файл" maxHeight="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button focusTraversable="false" text="Удалить файл" maxHeight="Infinity" HBox.hgrow="ALWAYS"/>
+        <Button focusTraversable="false" text="Выход из программы" maxHeight="Infinity" HBox.hgrow="ALWAYS" onAction="#btnExitAction"/>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+    </HBox>
+</VBox>
